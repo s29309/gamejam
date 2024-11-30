@@ -34,4 +34,18 @@ public class BallManager : MonoBehaviour
         }
         repulsor = newRepulsor;
     }
+    public void ClearAttractor()
+    {
+        if (attractor != null)
+        {
+            Destroy(attractor);
+        }
+    }
+    public void ClearRepulsor()
+    {
+        if (repulsor != null)
+        {
+            Destroy(repulsor);
+        }
+    }
 }

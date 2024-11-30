@@ -131,7 +131,7 @@ GameObject:
   - component: {fileID: 5397121861808631869}
   m_Layer: 6
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -217,7 +217,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4de1580536cd3cf4dac1073f7db85250, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 12
+  speed: 10
   jumpHeight: 20
   groundCheckSize: 0.2
   groundCheck: {fileID: 2890183611703372616}
@@ -358,5 +358,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gun: {fileID: 3837948023508982179}
   attractorPrefab: {fileID: 6191790525430478678, guid: efd50a3be76be37419198bfde46f9904, type: 3}
-  repulsorPrefab: {fileID: 0}
+  repulsorPrefab: {fileID: 7980710919298611276, guid: 3150fbd1c14d884478356187cdaf05a4, type: 3}
   cursor: {fileID: 0}
