@@ -3,7 +3,9 @@ using UnityEngine;
 namespace Turret_Projectile {
     public class Projectile : MonoBehaviour {
         [SerializeField] private TurretConfig turretConfig;
-        private float _speed; 
+        private float _speed;
+        [SerializeField] private float power;
+
         private Rigidbody2D _rb2d;
 
         private void Awake() {
@@ -16,12 +18,14 @@ namespace Turret_Projectile {
         }
 
         private void OnTriggerEnter2D(Collider2D other) {
-            if (other.gameObject.CompareTag("Ground")) {
+            if (other.gameObject.CompareTag("Ground") || other.gameObject.CompareTag("Platform")) {
                 Destroy(gameObject);
             }
 
             if (other.gameObject.CompareTag("Player")) {
-                //TODO: Player reaction to the projectile
+                other.GetComponent<PlayerController>().Stun();
+                other.attachedRigidbody.AddForce(Vector2.up * power);
+                other.attachedRigidbody.AddForce(transform.right*power);
                 Destroy(gameObject);
             }
         }
