@@ -225,7 +225,7 @@ GameObject:
   - component: {fileID: 1169706700}
   - component: {fileID: 1169706702}
   - component: {fileID: 1169706701}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -285,7 +285,7 @@ TilemapRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1080070139
+  m_SortingLayerID: 428255655
   m_SortingLayer: 1
   m_SortingOrder: 1
   m_ChunkSize: {x: 32, y: 32, z: 32}
@@ -9486,7 +9486,7 @@ GameObject:
   - component: {fileID: 1510532424}
   - component: {fileID: 1510532423}
   - component: {fileID: 1510532422}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Walls
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9582,7 +9582,7 @@ TilemapRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1580934653
+  m_SortingLayerID: 1713954799
   m_SortingLayer: 2
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
@@ -14509,7 +14509,7 @@ GameObject:
   - component: {fileID: 2143914845}
   - component: {fileID: 2143914847}
   - component: {fileID: 2143914846}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: walls_Inside
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14569,7 +14569,7 @@ TilemapRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1080070139
+  m_SortingLayerID: 428255655
   m_SortingLayer: 1
   m_SortingOrder: 2
   m_ChunkSize: {x: 32, y: 32, z: 32}

@@ -42,3 +42,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Background tiles
+    uniqueID: 428255655
+    locked: 0
+  - name: Level Walls
+    uniqueID: 1713954799
+    locked: 0
