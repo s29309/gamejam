@@ -137,5 +137,5 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   gravity: 10
-  radius: 4
+  radius: 6
   attractedObjects: []
