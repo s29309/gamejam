@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class Attractable : MonoBehaviour
@@ -37,7 +38,8 @@ public class Attractable : MonoBehaviour
     public void Attract(Attractor attractor)
     {
         Vector2 attractionDir = ((Vector2)attractor.transform.position - _rigidbody2D.position).normalized;
-        _rigidbody2D.AddForce(attractionDir * (attractor.gravity * gravityStrength * Time.fixedDeltaTime));
+        float scale = 1 - Vector2.Distance(attractor.transform.position, _rigidbody2D.position) / attractor.radius;
+        _rigidbody2D.AddForce(attractionDir * (attractor.gravity * gravityStrength * scale * Time.fixedDeltaTime));
 
         if (currentAttractor == null) 
         {

@@ -7,7 +7,7 @@ public class Attractor : MonoBehaviour
 {
     public LayerMask attractionLayer;
     public float gravity = 10;
-    [SerializeField] private float radius = 10;
+    public float radius = 10;
     public List<Collider2D> attractedObjects = new List<Collider2D>();
 
     void Update()
