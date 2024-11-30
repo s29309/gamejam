@@ -14,6 +14,7 @@ public class MovablePlatform : MonoBehaviour
     void Start()
     {
         _rigidbody2D = GetComponent<Rigidbody2D>();
+        _rigidbody2D.constraints = RigidbodyConstraints2D.FreezeRotation;
         if (Math.Round(posA.position.y) == Math.Round(posB.position.y))
         {
             _horizontal = true;
