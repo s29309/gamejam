@@ -8,6 +8,9 @@ public class Attractable : MonoBehaviour
     Collider2D _collider2D;
     Rigidbody2D _rigidbody2D;
 
+    [SerializeField]
+    float gravityScale = 1;
+
     private void Start()
     {
         _collider2D = GetComponent<Collider2D>();
@@ -23,11 +26,11 @@ public class Attractable : MonoBehaviour
                 currentAttractor = null;
                 return;
             }
-            _rigidbody2D.gravityScale = 0;
+            //_rigidbody2D.gravityScale = 0.5f;
         }
         else
         {
-            _rigidbody2D.gravityScale = 1;
+            //_rigidbody2D.gravityScale = gravityScale;
         }
     }
 
