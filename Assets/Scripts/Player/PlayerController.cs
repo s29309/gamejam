@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.UIElements;
 
 public class PlayerController : MonoBehaviour
 {
@@ -66,7 +67,16 @@ public class PlayerController : MonoBehaviour
     }
     private void CheckGround()
     {
-        grounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckSize, groundLayer);
+        Collider2D[] colliders = Physics2D.OverlapCircleAll(groundCheck.position, groundCheckSize);
+        foreach (Collider2D collider in colliders)
+        {
+            if (collider.CompareTag("Ground") || collider.CompareTag("Platform"))
+            {
+                grounded = true;
+                return;
+            }
+        }
+        grounded = false;
     }
     private void OnDrawGizmos()
     {
