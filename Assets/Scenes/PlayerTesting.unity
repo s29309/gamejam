@@ -673,17 +673,29 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2758757652089550247, guid: 17c910b02eb43b241a546cc7e72930e6, type: 3}
+      propertyPath: jumpHeight
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 2761946311522109258, guid: 17c910b02eb43b241a546cc7e72930e6, type: 3}
+      propertyPath: m_Mass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2761946311522109258, guid: 17c910b02eb43b241a546cc7e72930e6, type: 3}
+      propertyPath: m_GravityScale
+      value: 7.5
+      objectReference: {fileID: 0}
     - target: {fileID: 5375212105798116819, guid: 17c910b02eb43b241a546cc7e72930e6, type: 3}
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 6796609349271691190, guid: 17c910b02eb43b241a546cc7e72930e6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.54
+      value: -6.96
       objectReference: {fileID: 0}
     - target: {fileID: 6796609349271691190, guid: 17c910b02eb43b241a546cc7e72930e6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.62
+      value: -2.55
       objectReference: {fileID: 0}
     - target: {fileID: 6796609349271691190, guid: 17c910b02eb43b241a546cc7e72930e6, type: 3}
       propertyPath: m_LocalPosition.z

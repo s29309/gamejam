@@ -52,13 +52,17 @@ public class PlayerController : MonoBehaviour
     {
         if (grounded)
         {
-            Debug.Log("jumped");
             rigidbody.velocity = new Vector2(rigidbody.velocity.x, jumpHeight);
         }
     }
     private void Move()
     {
-        rigidbody.velocity = new Vector2(speed * directionX, rigidbody.velocity.y);
+        if (grounded)
+        {
+            rigidbody.velocity = new Vector2(speed * directionX, rigidbody.velocity.y);
+            return;
+        }
+        rigidbody.velocity = new Vector2(rigidbody.velocity.x + speed*0.05f * directionX, rigidbody.velocity.y);
     }
     private void CheckGround()
     {
