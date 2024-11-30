@@ -5,7 +5,6 @@ TagManager:
   serializedVersion: 2
   tags:
   - Platform
-  - Ground
   layers:
   - Default
   - TransparentFX
@@ -48,4 +47,7 @@ TagManager:
     locked: 0
   - name: Level Walls
     uniqueID: 1713954799
+    locked: 0
+  - name: Foreground
+    uniqueID: 3571512401
     locked: 0
