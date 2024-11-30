@@ -52,10 +52,10 @@ public class GunController : MonoBehaviour
 
     public void ShootAttractor()
     {
-        Instantiate(attractorPrefab, transform.position, rotation);
+        Instantiate(attractorPrefab, gun.transform.position+gun.transform.right, rotation);
     }
     public void ShootRepulsor()
     {
-        Instantiate(repulsorPrefab, transform.position, rotation);
+        Instantiate(repulsorPrefab, gun.transform.position + gun.transform.right, rotation);
     }
 }
