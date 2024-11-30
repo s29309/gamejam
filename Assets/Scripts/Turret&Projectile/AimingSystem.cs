@@ -1,5 +1,4 @@
 using System;
-using System.Collections;
 using UnityEngine;
 
 namespace Turret_Projectile {
@@ -32,7 +31,7 @@ namespace Turret_Projectile {
             if (playerY < gameObject.transform.position.y) {
                 angle *= -1;
             }
-            return Quaternion.Euler(0, 0, angle);
+            return Quaternion.AngleAxis(angle, Vector3.forward);
         }
     }
 }

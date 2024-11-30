@@ -205,7 +205,7 @@ MonoBehaviour:
   aimingSystem: {fileID: 7888932081160334968}
   projectilePrefab: {fileID: 6488374529038304908, guid: 2fb8f6bf9a44dbf448e79f165454b302, type: 3}
   turretConfig: {fileID: 11400000, guid: dc050e663e8360d47ab3e3ab92843c93, type: 2}
-  turretSprite: {fileID: 8922324158962246497}
+  turretTurning: {fileID: 1310139802574173791}
 --- !u!114 &7137673626457710073
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -219,6 +219,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectileSpawn: {fileID: 4952877548395194948}
+  turretTurning: {fileID: 1310139802574173791}
 --- !u!1 &8922324158962246497
 GameObject:
   m_ObjectHideFlags: 0
@@ -229,6 +230,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8533027006021222343}
   - component: {fileID: 5204977320502277766}
+  - component: {fileID: 1310139802574173791}
   m_Layer: 0
   m_Name: Sprite
   m_TagString: Untagged
@@ -303,3 +305,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1310139802574173791
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8922324158962246497}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 496f50177eb5f574699a02f1f05bad98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  aimingSystem: {fileID: 7888932081160334968}
+  turretSprite: {fileID: 8922324158962246497}
+  turretConfig: {fileID: 11400000, guid: dc050e663e8360d47ab3e3ab92843c93, type: 2}
