@@ -16,6 +16,7 @@ public class PlayerController : MonoBehaviour
     private float directionX;
 
     private bool grounded = false;
+    private bool stunned = false;
 
     public Transform groundCheck;
     [SerializeField]
@@ -58,12 +59,16 @@ public class PlayerController : MonoBehaviour
     }
     private void Move()
     {
-        if (grounded)
+        //if (grounded)
+        //{
+        if (stunned)
         {
-            rigidbody.velocity = new Vector2(speed * directionX, rigidbody.velocity.y);
             return;
         }
-        rigidbody.velocity = new Vector2(rigidbody.velocity.x + speed*0.05f * directionX, rigidbody.velocity.y);
+            rigidbody.velocity = new Vector2(speed * directionX, rigidbody.velocity.y);
+        //    return;
+        //}
+        //rigidbody.velocity = new Vector2(rigidbody.velocity.x + speed*0.05f * directionX, rigidbody.velocity.y);
     }
     private void CheckGround()
     {
@@ -78,10 +83,17 @@ public class PlayerController : MonoBehaviour
         }
         grounded = false;
     }
+
+    public void Stun()
+    {
+
+        stunned = true;
+    }
     private void OnDrawGizmos()
     {
         CheckGround();
         if (grounded) { Gizmos.color = Color.red; }
         Gizmos.DrawWireSphere(groundCheck.position, groundCheckSize);
     }
+    
 }

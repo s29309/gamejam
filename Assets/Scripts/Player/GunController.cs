@@ -15,11 +15,12 @@ public class GunController : MonoBehaviour
     private GameObject repulsorPrefab;
     [SerializeField]
     private GameObject cursor;
+    private BallManager ballManager;
 
     Quaternion rotation;
     void Start()
     {
-        
+        ballManager = GameObject.FindObjectOfType<BallManager>();
     }
 
     // Update is called once per frame
@@ -52,10 +53,12 @@ public class GunController : MonoBehaviour
 
     public void ShootAttractor()
     {
+        ballManager.ClearAttractor();
         Instantiate(attractorPrefab, gun.transform.position+gun.transform.right, rotation);
     }
     public void ShootRepulsor()
     {
+        ballManager.ClearRepulsor();
         Instantiate(repulsorPrefab, gun.transform.position + gun.transform.right, rotation);
     }
 }
