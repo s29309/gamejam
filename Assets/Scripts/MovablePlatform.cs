@@ -14,16 +14,15 @@ public class MovablePlatform : MonoBehaviour
     void Start()
     {
         _rigidbody2D = GetComponent<Rigidbody2D>();
-        _rigidbody2D.constraints = RigidbodyConstraints2D.FreezeRotation;
         if (Math.Round(posA.position.y) == Math.Round(posB.position.y))
         {
             _horizontal = true;
-            _rigidbody2D.constraints = RigidbodyConstraints2D.FreezePositionY;
+            _rigidbody2D.constraints = RigidbodyConstraints2D.FreezePositionY | RigidbodyConstraints2D.FreezeRotation;
         }
         else
         {
             _vertical = true;
-            _rigidbody2D.constraints = RigidbodyConstraints2D.FreezePositionX;
+            _rigidbody2D.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezeRotation;
         }
     }
 
