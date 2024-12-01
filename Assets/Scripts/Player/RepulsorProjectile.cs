@@ -27,7 +27,7 @@ public class RepulsorProjectile : MonoBehaviour
     }
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.collider.CompareTag("Ground") || collision.collider.CompareTag("Platform"))
+        if (collision.collider.CompareTag("Ground") || collision.collider.CompareTag("Platform")||collision.collider.CompareTag("Catcher"))
         {
             GameObject repulsor = Instantiate(repulsorPrefab, transform.position, transform.rotation);
             Object.FindObjectOfType<BallManager>().setRepulsor(repulsor);
