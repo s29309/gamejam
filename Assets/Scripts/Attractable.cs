@@ -39,6 +39,7 @@ public class Attractable : MonoBehaviour
     {
         Vector2 attractionDir = ((Vector2)attractor.transform.position - _rigidbody2D.position).normalized;
         float scale = 1 - Vector2.Distance(attractor.transform.position, _rigidbody2D.position) / attractor.radius;
+        if (scale < 0) scale = 0;
         _rigidbody2D.AddForce(attractionDir * (attractor.gravity * gravityStrength * scale * Time.fixedDeltaTime));
 
         if (currentAttractor == null) 
