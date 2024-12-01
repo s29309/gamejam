@@ -32,7 +32,6 @@ public class RepulsorProjectile : MonoBehaviour
             GameObject repulsor = Instantiate(repulsorPrefab, transform.position, transform.rotation);
             Object.FindObjectOfType<BallManager>().setRepulsor(repulsor);
             Attractor repulsorScript = repulsor.GetComponent<Attractor>();
-            repulsorScript.gravity = -repulsorScript.gravity;
             //attractor.transform.SetParent(collision.transform, true);
         }
         else if (collision.collider.CompareTag("GravityPoint"))
