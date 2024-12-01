@@ -136,6 +136,6 @@ MonoBehaviour:
   attractionLayer:
     serializedVersion: 2
     m_Bits: 64
-  gravity: 65
-  radius: 4
+  gravity: 80
+  radius: 5
   attractedObjects: []
