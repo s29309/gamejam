@@ -47,8 +47,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   turretShooting: {fileID: 7137673626457710073}
   spriteRenderer: {fileID: 5204977320502277766}
-  spriteA: {fileID: 7482667652216324306, guid: 2d6e1502b0838064b8bae72fd49246f8, type: 3}
-  spriteB: {fileID: -2413806693520163455, guid: 587d081738a36b54785a9c8a066a6101, type: 3}
+  spriteIdle: {fileID: 7482667652216324306, guid: 2d6e1502b0838064b8bae72fd49246f8, type: 3}
+  spriteShooting: {fileID: -2413806693520163455, guid: 587d081738a36b54785a9c8a066a6101, type: 3}
 --- !u!58 &165047202854727419
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -97,6 +97,8 @@ GameObject:
   - component: {fileID: 5538698316066551762}
   - component: {fileID: 4952877548395194948}
   - component: {fileID: 7137673626457710073}
+  - component: {fileID: 3854455028588078273}
+  - component: {fileID: 1936959835431006468}
   m_Layer: 6
   m_Name: Turret
   m_TagString: Untagged
@@ -223,6 +225,34 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectileSpawn: {fileID: 4952877548395194948}
   turretTurning: {fileID: 1310139802574173791}
+--- !u!114 &3854455028588078273
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7422854680520573255}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a3bb1766162b4a4880ae3c58f0b224b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destructionThreshold: 10
+--- !u!114 &1936959835431006468
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7422854680520573255}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4070fcb05fcbbd54f816adadc28a3a39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentAttractor: {fileID: 0}
+  gravityStrength: 100
+  gravityScale: 1
 --- !u!1 &8922324158962246497
 GameObject:
   m_ObjectHideFlags: 0
