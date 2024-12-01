@@ -161,5 +161,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ae99a06cb495f44e8065917873a9357, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attractorPrefab: {fileID: 1465401144317155901, guid: a9b017d52af01b6478b72196a510c21b, type: 3}
+  attractorPrefab: {fileID: 8709814282570466825, guid: 07586a265b88b7343bcb71d2045dc5f6, type: 3}
   speed: 20
