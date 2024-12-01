@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2362554621135825073}
   - component: {fileID: 6926812882637100512}
   - component: {fileID: 313603662345114436}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: RepulsorProjectile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
