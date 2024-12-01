@@ -22,11 +22,13 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     public LayerMask groundLayer;
     private Rigidbody2D rigidbody;
+    private Collider2D collider;
 
     // Start is called before the first frame update
     void Start()
     {
         rigidbody = GetComponent<Rigidbody2D>();
+        collider = GetComponent<Collider2D>();
     }
 
     // Update is called once per frame
@@ -86,8 +88,8 @@ public class PlayerController : MonoBehaviour
 
     public void Stun()
     {
-
         stunned = true;
+        StartCoroutine(Recover());
     }
     private void OnDrawGizmos()
     {
@@ -95,5 +97,44 @@ public class PlayerController : MonoBehaviour
         if (grounded) { Gizmos.color = Color.red; }
         Gizmos.DrawWireSphere(groundCheck.position, groundCheckSize);
     }
-    
+
+    private IEnumerator Recover()
+    {
+        rigidbody.constraints = RigidbodyConstraints2D.None;
+
+        yield return new WaitForSeconds(1);
+        float duration = 0.5f;
+        float elapsed = 0f;
+        float initialRotation = rigidbody.rotation;
+
+        Vector2 initialBottom = GetColliderBottomPosition();
+
+        while (elapsed < duration)
+        {
+            elapsed += Time.deltaTime;
+            float t = Mathf.Clamp01(elapsed / duration);
+
+            float newRotation = Mathf.Lerp(initialRotation, 0f, t);
+            rigidbody.MoveRotation(newRotation);
+
+            Vector2 newBottom = GetColliderBottomPosition();
+            Vector2 positionAdjustment = initialBottom - newBottom;
+
+            rigidbody.MovePosition(rigidbody.position + positionAdjustment);
+
+            yield return null;
+        }
+
+        rigidbody.rotation = 0f;
+
+        rigidbody.constraints = RigidbodyConstraints2D.FreezeRotation;
+        stunned = false;
+    }
+
+    private Vector2 GetColliderBottomPosition()
+    {
+        // Get the collider's bounds and calculate the bottom position
+        Bounds bounds = collider.bounds;
+        return new Vector2(bounds.center.x, bounds.min.y);
+    }
 }

@@ -26,6 +26,21 @@ namespace Turret_Projectile {
                 other.GetComponent<PlayerController>().Stun();
                 other.attachedRigidbody.AddForce(Vector2.up * power);
                 other.attachedRigidbody.AddForce(transform.right*power);
+
+                Vector2 triggerPosition = other.transform.position;
+
+                // Check if the triggering object is on the right or left
+                if (triggerPosition.x > transform.position.x)
+                {
+                    // Trigger is on the right, apply negative torque
+                    other.attachedRigidbody.AddTorque(-power*0.1f, ForceMode2D.Force);
+                }
+                else
+                {
+                    // Trigger is on the left, apply positive torque
+                    other.attachedRigidbody.AddTorque(power * 0.1f, ForceMode2D.Force);
+                }
+
                 Destroy(gameObject);
             }
         }

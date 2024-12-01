@@ -34,6 +34,10 @@ public class AttractorProjectile : MonoBehaviour
             //Attractor attractorScript = attractor.GetComponent<Attractor>();
             //attractor.transform.SetParent(collision.transform, true);
         }
+        else if (collision.collider.CompareTag("GravityPoint"))
+        {
+            Destroy(collision.gameObject);
+        }
         Destroy(gameObject);
     }
 }

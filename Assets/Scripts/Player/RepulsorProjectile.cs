@@ -35,6 +35,10 @@ public class RepulsorProjectile : MonoBehaviour
             repulsorScript.gravity = -repulsorScript.gravity;
             //attractor.transform.SetParent(collision.transform, true);
         }
+        else if (collision.collider.CompareTag("GravityPoint"))
+        {
+            Destroy(collision.gameObject);
+        }
         Destroy(gameObject);
     }
 }
