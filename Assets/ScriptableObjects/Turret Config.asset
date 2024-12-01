@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ebc5e884db5a7244882a00d80c3d8765, type: 3}
   m_Name: Turret Config
   m_EditorClassIdentifier: 
-  projectileSpeed: 5
+  projectileSpeed: 10
   shootingSeriesCooldown: 2
   projectileCooldown: 0.3
   projectileCount: 3

@@ -46,6 +46,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   turretShooting: {fileID: 7137673626457710073}
+  spriteRenderer: {fileID: 5204977320502277766}
+  spriteA: {fileID: 7482667652216324306, guid: 2d6e1502b0838064b8bae72fd49246f8, type: 3}
+  spriteB: {fileID: -2413806693520163455, guid: 587d081738a36b54785a9c8a066a6101, type: 3}
 --- !u!58 &165047202854727419
 CircleCollider2D:
   m_ObjectHideFlags: 0
