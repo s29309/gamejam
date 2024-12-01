@@ -29,15 +29,12 @@ namespace Turret_Projectile {
 
                 Vector2 triggerPosition = other.transform.position;
 
-                // Check if the triggering object is on the right or left
                 if (triggerPosition.x > transform.position.x)
                 {
-                    // Trigger is on the right, apply negative torque
                     other.attachedRigidbody.AddTorque(-power*0.1f, ForceMode2D.Force);
                 }
                 else
                 {
-                    // Trigger is on the left, apply positive torque
                     other.attachedRigidbody.AddTorque(power * 0.1f, ForceMode2D.Force);
                 }
 
