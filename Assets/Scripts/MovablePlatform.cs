@@ -33,6 +33,22 @@ public class MovablePlatform : MonoBehaviour
         if (_vertical) pos.y = Mathf.Clamp(pos.y, posA.position.y, posB.position.y);
         transform.position = pos;
     }
+    
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            other.transform.SetParent(this.transform);
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            other.transform.SetParent(null);
+        }
+    }
 
     private void OnDrawGizmos()
     {
