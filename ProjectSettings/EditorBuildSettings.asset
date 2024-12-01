@@ -12,6 +12,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Start Menu.unity
     guid: 297688fb958d673468eae26340875895
   - enabled: 1
-    path: Assets/Scenes/GravityPointsTest.unity
-    guid: 352959304c534914f9342be558a6f190
+    path: Assets/Scenes/Level.unity
+    guid: b1eb8662044cb3341af31ebe5f10f681
   m_configObjects: {}
