@@ -4,16 +4,21 @@ using UnityEngine;
 namespace Turret_Projectile {
     public class AimingSystem : MonoBehaviour {
         [SerializeField] private TurretShooting turretShooting;
+        [SerializeField] private SpriteRenderer spriteRenderer;
+        [SerializeField] private Sprite spriteA;
+        [SerializeField] private Sprite spriteB;
 
         private void OnTriggerEnter2D(Collider2D other) {
             if (other.gameObject.CompareTag("Player")) {
                 turretShooting.SetTarget(other.gameObject);
+                spriteRenderer.sprite = spriteB;
             }
         }
 
         private void OnTriggerExit2D(Collider2D other) {
             if (other.gameObject.CompareTag("Player")) {
                 turretShooting.SetTarget(null);
+                spriteRenderer.sprite = spriteA;
             }
         }
 
