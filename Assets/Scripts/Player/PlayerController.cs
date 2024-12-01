@@ -23,7 +23,8 @@ public class PlayerController : MonoBehaviour
     public LayerMask groundLayer;
     private Rigidbody2D rigidbody;
     private Collider2D collider;
-
+    [SerializeField]
+    private AudioSource audioSource;
     // Start is called before the first frame update
     void Start()
     {
@@ -88,6 +89,7 @@ public class PlayerController : MonoBehaviour
 
     public void Stun()
     {
+        audioSource.Play();
         stunned = true;
         StartCoroutine(Recover());
     }
